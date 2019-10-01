@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Siemka");
+            Console.ReadKey();
+
+            double x, y, z;
+            Console.WriteLine("Podaj x: ");
+            x = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj y: ");
+            y = double.Parse(Console.ReadLine());
+            z = x * y;
+
+            Console.WriteLine("Pole = " + z);
+            Console.ReadKey();
+
+
+            double a, b, c, d, e, f;
+            Console.WriteLine("Podaj a: ");
+            a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj b: ");
+            b = double.Parse(Console.ReadLine());
+
+            c = a + b;
+            d = a - b;
+            e = a * b;
+            f = a / b;
+
+            Console.WriteLine("Suma = " + c);
+            Console.WriteLine("Różnica = " + d);
+            Console.WriteLine("Iloczyn = " + e);
+            Console.WriteLine("Iloraz = " + f);
+            Console.ReadKey();
+
+
+        }
+    }
+}
