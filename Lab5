@@ -1,0 +1,39 @@
+using System;
+
+// 5.1 Klasa Prostokat - prywatne dane i metody
+
+class Prostokat 
+{
+  private int dlugosc;
+  private int szerokosc;
+
+  private int powierzchnia() 
+    {
+      return this.dlugosc*this.szerokosc;
+    }
+
+  private int obwod() 
+    {
+      return 2*this.dlugosc+2*this.szerokosc;
+    }
+    
+  public void Prezentuj() 
+    {
+      Console.WriteLine("Powierzchnia wynosi: {0}, a obwód: {1}", this.powierzchnia(), this.obwod());
+    }
+
+  public Prostokat(int _dlugosc, int _szerokosc)
+    {
+    this.szerokosc = _szerokosc;
+    this.dlugosc = _dlugosc;
+    }
+}
+
+class MainClass 
+{
+  public static void Main (string[] args) 
+    {
+    Prostokat Stefan = new Prostokat(20,30);
+    Stefan.Prezentuj();
+    }
+}
