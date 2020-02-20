@@ -1,0 +1,59 @@
+using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+// 3.1 Jednowymiarowa tablica 100 - parz. i nieparz.
+
+          int[] tab = new int[100];
+          int nieparz = 0;
+          int parz = 0;
+
+          for (int i = 1; i <= 100; ++i)
+            {
+                tab[i-1] = i+1;
+                Console.Write(i + " ");
+            }
+
+          Console.WriteLine();
+
+          for (int n = 1; n <=100; n += 2)
+            {
+                nieparz +=n;
+            }
+          Console.WriteLine("Suma liczb nieparzystych to: " + nieparz);
+
+          for (int p = 2; p <= 100; p += 2)
+            {
+                parz +=p;
+            }
+            Console.WriteLine("Suma liczb parzystych to: " + parz);
+
+          Console.ReadKey();
+
+// 3.5 Kalkulator BMI
+
+          double waga, wzrost, BMI;
+
+          Console.WriteLine("Podaj wagę w kg: ");
+          waga = Convert.ToDouble(Console.ReadLine());
+          Console.WriteLine("Podaj wzrost w metrach, używając kropki: ");
+          wzrost = Convert.ToDouble(Console.ReadLine());
+
+          BMI = waga/(wzrost*wzrost);
+
+          if (BMI < 18.5)
+                Console.WriteLine("Twoje BMI wynosi {0}. Masz NIEDOWAGĘ.", BMI);
+          else if (BMI >= 25.0)
+                Console.WriteLine("Twoje BMI wynosi {0}. Masz NADWAGĘ.", BMI);
+          else
+                Console.WriteLine("Twoje BMI wynosi {0}. Masz PRAWIDŁOWĄ WAGĘ.", BMI);
+
+          Console.ReadKey();
+
+        }
+    }
+}
