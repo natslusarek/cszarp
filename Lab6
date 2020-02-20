@@ -1,0 +1,50 @@
+using System; 
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+// 6.1 Operatory warunkowe - parzyste pomiędzy
+
+          int poczatek, koniec, parzystypoczatek, parzystykoniec;
+          Console.Write("Podaj pierwszą liczbę całkowitą: ");
+            poczatek = Int32.Parse(Console.ReadLine());
+          Console.Write("Podaj drugą liczbę całkowitą: ");
+            koniec = Int32.Parse(Console.ReadLine());
+
+          parzystypoczatek = (poczatek % 2 == 0) ? parzystypoczatek = poczatek : parzystypoczatek = poczatek + 1;
+          parzystykoniec = (koniec % 2 == 0) ? parzystykoniec = koniec : parzystykoniec = koniec - 1;
+
+          Console.Write("Parzyste liczby między podanymi wartościami to: ");
+          for (int i = parzystypoczatek; i <= parzystykoniec; i += 2)
+              Console.Write(i + " ");
+
+          Console.WriteLine();
+          Console.ReadKey();
+
+// 6.2 Szczęśliwy numerek 
+
+          Random rnd = new Random();
+          int szczesliwy = rnd.Next(0, 10);
+          int podanaliczba, licznik = 1;
+
+          do
+          {
+            Console.Write("Podaj liczbę w przedziale 0-10: ");
+            podanaliczba = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Została podana liczba {0}.", podanaliczba);
+              if (podanaliczba == szczesliwy)
+                  break;
+              else
+                  Console.WriteLine("Spróbuj jeszcze raz!");
+                licznik++;
+          }
+          while (podanaliczba != szczesliwy);
+
+            Console.WriteLine("Brawo!");
+            Console.WriteLine("Udało się zgadnąć za {0} razem.", licznik);
+
+            Console.ReadKey();
+        }
+    }
