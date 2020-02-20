@@ -10,37 +10,71 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Siemka");
+
+// 1.1 Prosty program – wypisanie: Hello world!
+
+            Console.WriteLine("Witaj, świecie");
             Console.ReadKey();
 
-            double x, y, z;
-            Console.WriteLine("Podaj x: ");
-            x = double.Parse(Console.ReadLine());
-            Console.WriteLine("Podaj y: ");
-            y = double.Parse(Console.ReadLine());
-            z = x * y;
+// 1.2 Wyznaczanie pola prostokąta o zadanych bokach a i b z klawiatury
 
-            Console.WriteLine("Pole = " + z);
-            Console.ReadKey();
+            double a, b, wynik;
+            Console.WriteLine("Podaj bok a > 0: ");
+            a = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj bok b > 0: ");
+            b = Double.Parse(Console.ReadLine());
+            wynik = a * b;
+            Console.WriteLine("Pole prostokąta wynosi: " + wynik);
+            Console.ReadLine();
 
 
-            double a, b, c, d, e, f;
-            Console.WriteLine("Podaj a: ");
-            a = double.Parse(Console.ReadLine());
-            Console.WriteLine("Podaj b: ");
-            b = double.Parse(Console.ReadLine());
+// 1.3 Prosty kalkulator
 
-            c = a + b;
-            d = a - b;
-            e = a * b;
-            f = a / b;
+            double x, y, suma, roznica, iloczyn, iloraz;
+            Console.WriteLine("Podaj liczbę x: ");
+            x = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj liczbę y: ");
+            y = Double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Suma = " + c);
-            Console.WriteLine("Różnica = " + d);
-            Console.WriteLine("Iloczyn = " + e);
-            Console.WriteLine("Iloraz = " + f);
-            Console.ReadKey();
+            suma = x + y;
+            roznica = x - y;
+            iloczyn = x * y;
+            iloraz = x / y;
 
+            Console.WriteLine("Suma wynosi: " + suma);
+            Console.WriteLine("Różnica wynosi: " + roznica);
+            Console.WriteLine("Iloczyn wynosi: " + iloczyn);
+            Console.WriteLine("Iloraz wynosi: " + iloraz);
+            Console.ReadLine();
+
+// 1.4 Ciąg Fibonacciego
+
+            int n1 = 0, n2 = 1, n3, i, n;
+            Console.WriteLine("Podaj, ile wyrazów ciągu chcesz obliczyć: ");
+            n = Convert.ToInt16(Console.ReadLine());
+            Console.WriteLine("Wynik działania to: ");
+            Console.Write(n1 + " " + n2 + " ");
+
+            for (i = 2; i < n; ++i)
+            {
+                n3 = n1 + n2;
+                Console.Write(n3 + " ");
+                n1 = n2;
+                n2 = n3;
+            }
+            Console.ReadLine();
+
+// 1.5 Silnia
+
+            int liczba, silnia = 1, j;
+            Console.WriteLine("Podaj liczbę, dla której chcesz wyliczyć silnię: ");
+            liczba = int.Parse(Console.ReadLine());
+ 
+            for (j = 1; j <= liczba; j++)
+                silnia*=j;
+ 
+            Console.WriteLine("Silnia wynosi: " + silnia);
+            Console.ReadLine();
 
         }
     }
