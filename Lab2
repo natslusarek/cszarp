@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+// 2.1 Trójka pitagorejska
+
+            double a, b, c;
+            Console.WriteLine("Podaj 1 liczbę: ");
+            a = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj 2 liczbę: ");
+            b = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj 3 liczbę: ");
+            c = Double.Parse(Console.ReadLine());
+
+            if (a*a + b*b == c*c)
+                Console.WriteLine("True");
+            else if (b*b + c*c == a*a)
+                Console.WriteLine("True");
+            else if (a*a + c*c == b*b)
+                Console.WriteLine("True");
+            else
+                Console.WriteLine("False");
+            Console.ReadKey();
+
+// 2.2 Tabliczka mnożenia 10x10
+
+            int poziom, pion, mnozenie, n = 10;
+            for (poziom = 1; poziom <= n; poziom++)
+            {
+                for (pion = 1; pion <= n; pion++)
+                {
+                    mnozenie = poziom*pion;
+                    Console.Write(mnozenie + " ");
+                }
+                Console.WriteLine(" ");
+            }
+            Console.ReadKey();
+        
+// 2.3 Wartość pi, pierwiastek z pi - funkcje Math
+
+            double liczba_pi = Math.PI, kwadrat;
+            Console.WriteLine("Wartość liczby pi wynosi: " + liczba_pi);
+            kwadrat = Math.Sqrt(liczba_pi);
+            Console.WriteLine("Pierwiastek kwadratowy z liczby pi wynosi: " + kwadrat);
+            Console.ReadKey();
+
+// 2.4 Kula o promieniu r z klawiatury
+
+            double promien, objetosc;
+            Console.WriteLine("Podaj promień kuli: ");
+            promien = Double.Parse(Console.ReadLine());
+            objetosc = (4*liczba_pi*(promien*promien*promien))/3;
+            Console.WriteLine("Objętość kuli o promieniu {0} wynosi: {1}", promien, objetosc);
+            Console.ReadKey();
+
+         }
+    }
+}
